@@ -1,0 +1,174 @@
+header {
+    .top-bar {
+        padding: 10px;
+        border: 1px solid #E6E6E6;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+        .col_tels {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            min-height: 40px;
+            gap: 20px;
+            a {
+                color: $red;
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+
+                img {
+                    vertical-align: middle;
+                    margin-right: 14px;
+                }
+            //   & + a {
+            //     margin-left: 30px;
+            //   }
+            }
+        }
+        // Col Search
+        .col_search {
+            text-align: center;
+            .input-control-search {
+                display: flex;
+                padding: 5px;
+                border: 1px solid $red;
+                border-radius: 20px;
+
+                .form-control {
+                    border: none;
+                    &:focus {
+                        outline: none;
+                        box-shadow: none; 
+                    }
+                }
+                .btn {
+                    border: none;
+                    margin-left: 10px;
+                    content: "";
+                    text-indent: 9000px;
+                    width: 60px;
+                    overflow: hidden;
+                    background-repeat: no-repeat;
+                    background-position: center left;
+                    background-image: url("data:image/svg+xml,%3Csvg width='31' height='31' viewBox='0 0 31 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.232 0.478272C14.3897 0.478225 16.5021 1.10456 18.3186 2.28295C20.1351 3.46135 21.5795 5.14235 22.4803 7.12652C23.3812 9.11068 23.7007 11.3147 23.401 13.4771C23.1013 15.6396 22.1949 17.6696 20.7895 19.3264L30.5823 29.2368L29.3556 30.4783L19.561 20.5661C18.1797 21.7615 16.5333 22.6014 14.7621 23.0142C12.9909 23.427 11.1473 23.4004 9.38846 22.9368C7.62958 22.4732 6.00749 21.5862 4.66032 20.3514C3.31316 19.1167 2.28083 17.5707 1.65128 15.8451C1.02172 14.1196 0.813583 12.2657 1.04459 10.4412C1.27559 8.6167 1.9389 6.87575 2.97801 5.3666C4.01712 3.85745 5.40126 2.62482 7.01253 1.77369C8.6238 0.922552 10.4145 0.47813 12.232 0.478272ZM12.232 2.2342C9.70109 2.2342 7.2738 3.25169 5.48415 5.06284C3.69449 6.87399 2.68908 9.33044 2.68908 11.8918C2.68908 14.4531 3.69449 16.9096 5.48415 18.7207C7.2738 20.5319 9.70109 21.5494 12.232 21.5494C14.763 21.5494 17.1903 20.5319 18.9799 18.7207C20.7696 16.9096 21.775 14.4531 21.775 11.8918C21.775 9.33044 20.7696 6.87399 18.9799 5.06284C17.1903 3.25169 14.763 2.2342 12.232 2.2342Z' fill='%23E45858'/%3E%3C/svg%3E");
+                    &:hover, &:active, &:focus {
+                        background-color: $white;
+                        outline: none;
+                    }
+                }
+            }
+        }
+        // Col Links 
+        .col_links {
+            text-align: right;
+            vertical-align: middle;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            a {
+                font-weight: 700;
+                padding-left: 20px;
+                padding-right: 20px;
+                & + a {
+                    margin-left: 36px;
+                }
+            }
+        }
+    }
+    #header {
+        background: $white !important; 
+
+        .search-form {
+            min-width: 250px;
+        }
+          
+        .navbar-brand {
+            img {
+                max-height: 173px;
+            }
+            margin-right: 75px;
+        }
+
+        .navbar-nav {
+
+            > .menu-item {
+               & + .menu-item {
+                margin-left: 40px;
+               }   
+
+                .nav-link {
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                a.nav-link.dropdown-toggle::after {
+                    color: #FE5B5B;
+                    border-left: none;
+                    border-right: none;
+                    border: none;
+                    margin-left: 0;
+                    display: block;
+                }
+
+                &.current-menu-parent > a,
+                a.nav-link.dropdown-toggle.show,
+                a:active{
+                    &::after {
+                        width: 32px;
+                        opacity: 1;
+                        transition: all .3s ease-in;
+                    }
+                }
+                
+            }
+            .menu-item {
+                a::after {
+                    display: block;
+                    content: "";
+                    opacity: 0;
+                    width: 0px;
+                    height: 5px;
+                    background-color: #FE5B5B;
+                    transition: all .3s ease-out;
+                }
+                &.current-menu-item > a,
+                a:hover{
+                    &::after {
+                        width: 32px;
+                        opacity: 1;
+                        transition: all .3s ease-in;
+                    }
+                }
+            }
+            .dropdown-menu {
+                border-radius: 0;
+                background-color: #FE5B5B;
+                padding: 0;
+                text-align: center;
+                border: none;
+                left: 7px !important;
+                 a {
+                    color: $white;
+                    text-align: center;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 18px;
+                    // background-color: #FE5B5B;
+                    &::after {
+                        height: 0;
+                        width: 0;
+                    }
+                 }
+
+                 a:hover, 
+                 .current-menu-item a{
+                    background-color: #ff4141;
+                 }
+            }
+        } 
+        
+    }
+}

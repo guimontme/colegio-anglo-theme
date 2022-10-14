@@ -1,0 +1,20 @@
+#footer {
+    background-color: $primary;
+    color: $white;
+    min-height: 350px;
+	background-image: url('./../img/bg-footer.png');
+	background-repeat: repeat-x;
+	background-position: top center;
+
+	p {
+		margin-top: 10px;
+	}
+
+	.menu-item {
+		a {
+			&[aria-current='page'] {
+				color: $link-hover-color;
+			}
+		}
+	}
+}
