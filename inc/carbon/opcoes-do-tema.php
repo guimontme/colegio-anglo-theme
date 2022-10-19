@@ -81,7 +81,7 @@ function crb_attach_theme_options() {
                          ->set_help_text( 'Título da rede. Ex.: Facebook, Twitter e ou Instagram' )
                          ->set_width( 40 )
                          ->set_required(),
-     ) )
+     ))
  ));
 
 
@@ -101,28 +101,30 @@ function crb_attach_theme_options() {
     Container::make( 'theme_options', 'Rodapé' )
     ->set_page_parent( $basic_options_container ) // identificator of the "Appearance" admin section
     ->add_fields( array(
-        Field::make( 'text', 'contato_shortcode', 'Shortcode do Formulário' ),
-        Field::make( 'image', 'logo_footer', 'Logo do Footer' )
-            // We're only changing the label field to an image one
-            ->set_width( 50 )
-            ->set_required(),
+        Field::make('text', 'text_newsletter', 'Texto sobre a Newsletter')
+            ->set_width( 50 ),
+        Field::make( 'text', 'contato_shortcode', 'Shortcode do Formulário' )
+            ->set_width( 50 ),
         Field::make('textarea', 'description_footer', 'Descrição no Rodapé')
-            ->set_width( 50 ),
+            ->set_width( 100 ),
         Field::make('textarea', 'adderess_footer', 'Endereço no Rodapé')
-            ->set_width( 33 ),
+            ->set_width( 100 ),
         Field::make('text', 'email_footer', 'Email no Rodapé')
-            ->set_width( 33 ),
-        Field::make('text', 'cell_phone_footer', 'Telefone Celular no Rodapé')
-            ->set_width( 33 ),
-        Field::make('text', 'phone_footer', 'Telefone no Rodapé')
-            ->set_width( 33 ),
-        Field::make('text', 'phone_footer', 'Telefone no Rodapé')
-            ->set_width( 33 ),
-        Field::make('textarea', 'text_newsletter', 'Texto sobre a Newsletter')
+            ->set_width( 100 ),
+            Field::make('text', 'text_whatsapp_footer','Texto do WhatsApp')
+            ->set_help_text( 'Pode escrever usando tag <strong></strong> (para negrito) e/ou <em></em> (para itálico)' )
             ->set_width( 50 ),
-        Field::make('text', 'shortcode_newsletter', 'Shostcode da Newsletter')
+        Field::make('text', 'href_whatsapp_footer','URL do Telefone do WhatsApp')
+            ->set_help_text( 'Escreva o completo e tudo junto, e sem o "+" do DDI. Ex.: 552129999999' )
             ->set_width( 50 ),
-	) );
+        Field::make('text', 'text_phone_footer', 'Telefone no Rodapé')
+            ->set_width( 50 ),
+        Field::make('text', 'href_phone_footer', 'Telefone no Rodapé')
+            ->set_help_text( 'Escreva o completo e tudo junto, e sem o "+" do DDI. Ex.: 552129999999' )
+            ->set_width( 50 ),
+        
+        Field::make('textarea', 'map_code', 'Código do Mapa'),
+	));
 	 // Contato
 	 Container::make( 'theme_options', 'Contato' )
 	 ->set_page_parent( $basic_options_container )
