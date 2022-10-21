@@ -8,22 +8,30 @@ $text_phone_footer = carbon_get_theme_option('text_phone_footer');
 $href_phone_footer = carbon_get_theme_option('href_phone_footer');
 $text_whatsapp_footer = carbon_get_theme_option('text_whatsapp_footer');
 $href_whatsapp_footer = carbon_get_theme_option('href_whatsapp_footer');
-$text_newsletter = carbon_get_theme_option('text_newsletter');
-$shortcode_newsletter = carbon_get_theme_option('shortcode_newsletter');
+// $text_newsletter = carbon_get_theme_option('text_newsletter');
+$shortcode_newsletter = carbon_get_theme_option('contato_shortcode');
 $map_code = carbon_get_theme_option('map_code');
 
 ?>
         <div id="footer-widget" class="row my-2">
             <div class="container">
+                <div class="row row_newsletter">
+                    <div class="col-12">
+                        <?php echo (!empty($shortcode_newsletter)) ? do_shortcode($shortcode_newsletter) : ''; ?>
+                    </div>
+                </div>
                 <div class="row">
                         <div class="col-12 col-lg-3 col_description">
-                            <a href="<?php echo esc_url( home_url( '/' )); ?>" class="logo_footer">
-                                <img src="<?php echo $logo_footer; ?>"
-                                    alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="logo">
-                            </a>
-                            <p class="text_unidade">
+                            <?php if($logo_footer): ?> 
+                                <a href="<?php echo esc_url( home_url( '/' )); ?>" class="logo_footer">
+                                    <img src="<?php echo $logo_footer; ?>"
+                                        alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="logo">
+                                </a>
+                            <?php endif; ?> 
+
+                            <!-- <p class="text_unidade">
                                 Unidade <strong>São Lourenço</strong> 
-                            </p>
+                            </p> -->
                             <p class="description"><?php echo $description_footer; ?></p>
                         </div>
                         <div class="col-12 col-lg-3 col_contato">
@@ -48,12 +56,12 @@ $map_code = carbon_get_theme_option('map_code');
                             ?>
 
                         </div>
-                        <div class="col-12 col-lg-2 col_menu">
+                        <div class="col-12 col-lg-3 col_menu">
                             <h3>Links rápidos</h3>
                             <nav>
                             <?php
                                 wp_nav_menu(array(
-                                'theme_location'  => 'rodape',
+                                'theme_location'  => 'footer-menu',
                                 'container'       => 'li',
                                 'container_id'    => 'nav_footer',
                                 'container_class' => 'nav',
@@ -67,7 +75,7 @@ $map_code = carbon_get_theme_option('map_code');
                             </nav>
                         
                         </div>
-                    <div class="col-12 col-lg-4 col_map">
+                    <div class="col-12 col-lg-3 col_map">
                         <h3>Onde estamos</h3>
                         <div class="map-responsive">
                             <?php echo do_shortcode( $map_code ); ?>

@@ -6,6 +6,30 @@
 	background-repeat: repeat-x;
 	background-position: top center;
 
+	.row_newsletter {
+		margin-top: 74px;
+		margin-bottom: 65px;
+		padding-bottom: 50px;
+		border-bottom: 1px solid $white;
+		strong {
+			font-weight: 700;
+			font-size: 32px;
+			line-height: 70px;
+		}
+		div {
+
+			display: flex;
+			justify-content: space-between;
+			gap: 20px;
+
+			label {
+				font-weight: 700;
+				font-size: 32px;
+			}
+
+		}
+	}
+
 	p {
 		margin-top: 10px;
 	}
@@ -13,6 +37,7 @@
 	h3 {
 		font-weight: 700;
 		font-size: 22px;
+		margin-bottom: 25px;
 	}
 	h4 {
 		font-weight: 400;
@@ -35,14 +60,6 @@
 		font-size: 18px;
 		line-height: 27px;
 	}
-
-	.menu-item {
-		a {
-			&[aria-current='page'] {
-				color: $link-hover-color;
-			}
-		}
-	}
 	.col_contato {
 		.contato_list {
 			list-style: none;
@@ -55,11 +72,14 @@
 					visibility: visible;
 					position: absolute;
 					top: 0;
+					font-size: 18px;
 					left: -35px;
 				}
 				margin-bottom: 20px;
 				a {
+					font-size: 18px;
 					color: $white;
+					text-decoration: none;
 				}
 			}
 			.address::before {
@@ -113,7 +133,27 @@
 	}
 	// COL MENU
 	.col_menu {
-		
+		.nav-footer {
+			list-style: none;
+			padding-left: 0;
+			margin-left: 0;
+
+			li {
+				padding-left: 0;
+				margin-left: 0;
+				a.nav-link {
+					font-family: 'Poppins';
+					font-weight: 500;
+					font-size: 18px;
+					line-height: 27px;
+					color: $white;
+					padding-left: 0;
+				}
+				& + li {
+					margin-top: 12px;
+				}
+			}
+		}
 	}
 
 	.col_map {
@@ -148,6 +188,10 @@
 		color: $white;
 		a {
 			color: $white;
+		}
+		p {
+			margin: 0;
+			padding: 0;
 		}
 	}
 }

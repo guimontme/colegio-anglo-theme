@@ -10,7 +10,7 @@
 <?php
 	$navbar_scheme   = get_theme_mod( 'navbar_scheme', 'navbar-light bg-light' ); // Get custom meta-value.
 	$navbar_position = get_theme_mod( 'navbar_position', 'static' ); // Get custom meta-value.
-	
+	$logo_site = carbon_get_theme_option('logo_site');
 ?>
 
 <body <?php body_class(); ?>>
@@ -25,17 +25,24 @@
 		<nav id="header" class="navbar navbar-expand-md <?php if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' fixed-top'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' fixed-bottom'; endif; if ( is_home() || is_front_page() ) : echo ' home'; endif; ?>">
 			<div class="container">
 				<a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+					<?php if (! empty($logo_site)): ?> 
+						<img src="<?php echo $logo_site; ?>"
+							alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="logo">
+	
 					<?php
 						$header_logo = get_theme_mod( 'header_logo' ); // Get custom meta-value.
 
-						if ( ! empty( $header_logo ) ) :
+						elseif ( ! empty( $header_logo ) ) :
 					?>
 						<img src="<?php echo esc_url( $header_logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
+					
+					
 					<?php
 						else :
 							echo esc_attr( get_bloginfo( 'name', 'display' ) );
-						endif;
+						
 					?>
+                	<?php endif; ?> 
 				</a>
 
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'colegio-anglo' ); ?>">
@@ -60,6 +67,9 @@
 			</div><!-- /.container -->
 		</nav><!-- /#header -->
 	</header>
+	<?php if (is_page_template( 'page-templates/home.php' )): ?>
+    	<?php echo do_shortcode( '[banner_home]' ); ?>
+	<?php endif; ?>
 
 	<main id="main" class="container"<?php if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' style="padding-top: 100px;"'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' style="padding-bottom: 100px;"'; endif; ?>>
 		<?php

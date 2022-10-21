@@ -101,10 +101,10 @@ function crb_attach_theme_options() {
     Container::make( 'theme_options', 'Rodapé' )
     ->set_page_parent( $basic_options_container ) // identificator of the "Appearance" admin section
     ->add_fields( array(
-        Field::make('text', 'text_newsletter', 'Texto sobre a Newsletter')
-            ->set_width( 50 ),
+        // Field::make('text', 'text_newsletter', 'Texto sobre a Newsletter')
+        //     ->set_width( 50 ),
         Field::make( 'text', 'contato_shortcode', 'Shortcode do Formulário' )
-            ->set_width( 50 ),
+            ->set_width( 100 ),
         Field::make('textarea', 'description_footer', 'Descrição no Rodapé')
             ->set_width( 100 ),
         Field::make('textarea', 'adderess_footer', 'Endereço no Rodapé')

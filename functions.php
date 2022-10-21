@@ -269,7 +269,7 @@ if ( ! function_exists( 'colegio_anglo_article_posted_on' ) ) :
 			esc_attr( get_the_date( 'c' ) ),
 			esc_html( get_the_date() . ' - ' . get_the_time() ),
 			esc_url( get_author_posts_url( (int) get_the_author_meta( 'ID' ) ) ),
-			sprintf( esc_attr__( 'View all posts by %s', 'colegio-anglo' ), get_the_author() ),
+			sprintf( esc_attr__( 'Veja todos os posts de %s', 'colegio-anglo' ), get_the_author() ),
 			get_the_author()
 		);
 	}
@@ -502,6 +502,10 @@ function colegio_anglo_scripts_loader() {
 }
 add_action( 'wp_enqueue_scripts', 'colegio_anglo_scripts_loader' );
 
+/**
+ * Custom Post Type
+ */
+require_once (__DIR__. '/inc/custom-post-types/cpt-home.php');
 
 /**
  * Carbon Fields
@@ -510,4 +514,6 @@ $carbon_fields = __DIR__ . '/vendor/carbon-fields/carbon-fields-plugin.php';
 if($carbon_fields) {
 	require_once $carbon_fields;
 	require_once (__DIR__. '/inc/carbon/opcoes-do-tema.php');
+	require_once (__DIR__. '/inc/carbon/banner-home.php');
 }
+
