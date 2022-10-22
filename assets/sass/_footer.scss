@@ -10,7 +10,7 @@
 		margin-top: 74px;
 		margin-bottom: 65px;
 		padding-bottom: 50px;
-		border-bottom: 1px solid $white;
+		border-bottom: 1px solid rgba($white, 0.5);
 		strong {
 			font-weight: 700;
 			font-size: 32px;
@@ -26,7 +26,13 @@
 				font-weight: 700;
 				font-size: 32px;
 			}
-
+			.newsletter-input {
+				display: block;
+				border-radius: 10px;
+				@include media-breakpoint-up(lg) {
+					min-width: 480px;
+				}
+			} 
 		}
 	}
 
@@ -59,7 +65,9 @@
 		font-weight: 300;
 		font-size: 18px;
 		line-height: 27px;
+		margin-top: 2rem;
 	}
+	// Col Contato
 	.col_contato {
 		.contato_list {
 			list-style: none;
@@ -145,17 +153,18 @@
 					font-family: 'Poppins';
 					font-weight: 500;
 					font-size: 18px;
-					line-height: 27px;
+					line-height: 18px;
 					color: $white;
 					padding-left: 0;
 				}
 				& + li {
-					margin-top: 12px;
+					margin-top: 10px;
 				}
 			}
 		}
 	}
 
+	// Col Map
 	.col_map {
 		// min-height: 550px;
 		.map-responsive{

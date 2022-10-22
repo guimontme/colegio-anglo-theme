@@ -8,7 +8,7 @@ $text_phone_footer = carbon_get_theme_option('text_phone_footer');
 $href_phone_footer = carbon_get_theme_option('href_phone_footer');
 $text_whatsapp_footer = carbon_get_theme_option('text_whatsapp_footer');
 $href_whatsapp_footer = carbon_get_theme_option('href_whatsapp_footer');
-// $text_newsletter = carbon_get_theme_option('text_newsletter');
+$text_newsletter = carbon_get_theme_option('text_newsletter');
 $shortcode_newsletter = carbon_get_theme_option('contato_shortcode');
 $map_code = carbon_get_theme_option('map_code');
 
@@ -16,7 +16,12 @@ $map_code = carbon_get_theme_option('map_code');
         <div id="footer-widget" class="row my-2">
             <div class="container">
                 <div class="row row_newsletter">
-                    <div class="col-12">
+                    <div class="col-lg-6">
+                        <label>
+                            <?php echo $text_newsletter; ?>
+                        </label>
+                    </div>
+                    <div class="col-lg-6">
                         <?php echo (!empty($shortcode_newsletter)) ? do_shortcode($shortcode_newsletter) : ''; ?>
                     </div>
                 </div>

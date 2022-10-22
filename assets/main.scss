@@ -7,7 +7,7 @@
 
 // @import "../node_modules/bootstrap/scss/bootstrap"; // Include all of Bootstrap
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "../node_modules/bootstrap/scss/functions";
@@ -68,6 +68,8 @@
  */
 
 body {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
 	&.page-template-page-full {
 		#main {
 			max-width: 100%;
@@ -293,7 +295,14 @@ img {
 	}
 }
 
+strong {
+	font-family: 'Poppins', serif;
+	font-weight: 700;
+}
+
 /*
  imports
 */
 @import 'sass/header';
+@import './sass/home/banner';
+@import 'sass/linksanglo';

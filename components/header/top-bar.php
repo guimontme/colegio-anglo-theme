@@ -1,8 +1,8 @@
 <?php 
     $text_whatsapp = carbon_get_theme_option('text_whatsapp');
-    $icon_whatsapp = carbon_get_theme_option('icon_whatsapp');
+    $icon_whatsapp =   get_stylesheet_directory_uri() . '/assets/img/whatsapp_red.svg' ;
     $href_whatsapp = carbon_get_theme_option('href_whatsapp');
-    $icon_tel = carbon_get_theme_option('icon_tel');
+    $icon_tel = get_stylesheet_directory_uri() . '/assets/img/tel-icon-red.svg' ;
     $text_tel = carbon_get_theme_option('text_tel');
     $href_tel = carbon_get_theme_option('href_tel');
     $search_enabled  = get_theme_mod( 'search_enabled', '1' ); // Get custom meta-value.
@@ -20,12 +20,12 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col_tels">
-                <?php if(!empty($href_whatsapp) && !empty($icon_whatsapp) && !empty($text_whatsapp)): ?>
+                <?php if(!empty($href_whatsapp) && !empty($text_whatsapp)): ?>
                 <a href="https://wa.me/<?= $href_whatsapp; ?>" target="_blank">
                     <img src="<?= $icon_whatsapp; ?>" alt="" srcset=""> <?= $text_whatsapp; ?>
                 </a>
                 <?php endif; ?>
-                <?php if(!empty($href_tel) && !empty($icon_tel) && !empty($text_tel)): ?>
+                <?php if(!empty($href_tel) && !empty($text_tel)): ?>
                 <a href="tel:+<?= $href_tel; ?>">
                     <img src="<?= $icon_tel; ?>" alt="" srcset=""> <?= $text_tel; ?>
                 </a>

@@ -503,6 +503,12 @@ function colegio_anglo_scripts_loader() {
 add_action( 'wp_enqueue_scripts', 'colegio_anglo_scripts_loader' );
 
 /**
+ * Shortcodes
+ */
+require_once (__DIR__. '/inc/shortcodes.php');
+
+
+/**
  * Custom Post Type
  */
 require_once (__DIR__. '/inc/custom-post-types/cpt-home.php');

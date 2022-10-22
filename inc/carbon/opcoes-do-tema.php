@@ -23,25 +23,19 @@ function crb_attach_theme_options() {
     Container::make( 'theme_options', 'Top Bar' )
     ->set_page_parent( $basic_options_container ) // identificator of the "Appearance" admin section
     ->add_fields( array(
-        Field::make( 'image', 'icon_whatsapp', 'Icone do WhatsApp' )
-        ->set_value_type('url')
-        ->set_width( 20 ),
         Field::make('text', 'text_whatsapp','Texto do WhatsApp')
             ->set_help_text( 'Pode escrever usando tag <strong></strong> (para negrito) e/ou <em></em> (para itálico)' )
-            ->set_width( 40 ),
+            ->set_width( 50 ),
         Field::make('text', 'href_whatsapp','URL do Telefone do WhatsApp')
             ->set_help_text( 'Ex: 5581989877766' )
-            ->set_width( 40 ),
+            ->set_width( 50 ),
         /* Material para o telefone */
-        Field::make( 'image', 'icon_tel', 'Icone do Telefone' )
-            ->set_value_type('url')
-            ->set_width( 20 ),
         Field::make('text', 'text_tel','Texto Telefone')
             ->set_help_text( 'Pode escrever usando tag <strong></strong> (para negrito) e/ou <em></em> (para itálico)' )
-            ->set_width( 40 ),
+            ->set_width( 50 ),
         Field::make('text', 'href_tel','URL do Telefone')
             ->set_help_text( 'Ex: 5581989877766' )
-            ->set_width( 40 ),
+            ->set_width( 50 ),
 
         Field::make('text', 'text_btn_blue','Texto Botão Azul')
             ->set_help_text( 'Texto' )
@@ -101,10 +95,10 @@ function crb_attach_theme_options() {
     Container::make( 'theme_options', 'Rodapé' )
     ->set_page_parent( $basic_options_container ) // identificator of the "Appearance" admin section
     ->add_fields( array(
-        // Field::make('text', 'text_newsletter', 'Texto sobre a Newsletter')
-        //     ->set_width( 50 ),
+        Field::make('text', 'text_newsletter', 'Texto sobre a Newsletter')
+            ->set_width( 50 ),
         Field::make( 'text', 'contato_shortcode', 'Shortcode do Formulário' )
-            ->set_width( 100 ),
+            ->set_width( 50 ),
         Field::make('textarea', 'description_footer', 'Descrição no Rodapé')
             ->set_width( 100 ),
         Field::make('textarea', 'adderess_footer', 'Endereço no Rodapé')

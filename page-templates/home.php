@@ -5,22 +5,11 @@
 * Template Name: Home
 *
 */
+get_header();
 
 ?>
-<html class="no-js" <?php language_attributes(); ?>>
-
-<head>
-    <meta charset="<?php bloginfo('charset'); ?>" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="profile" href="http://gmpg.org/xfn/11" />
-    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-    <?php wp_head(); ?>
-</head>
-
-<body class="home">
-<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Pular para o conteúdo', 'colegio-anglo' ); ?></a>
-	<?php get_template_part( 'components/header/header' ) ?><!-- #header -->
-<main id="content" class="site-content ">
+<?php // get_template_part( 'components/header/header' ) ?><!-- #header -->
+<main id="content" class="site-content row">
             <?php
             $args = array (
                 'post_type' => 'home_section',
@@ -35,9 +24,5 @@
                 endwhile;
             ?>
 </main>
-<?php get_template_part( 'components/footer/footer' ); ?>
-<?php wp_footer(); ?>
-<?php /* <script src="https://code.jquery.com/jquery-1.10.2.js"></script> */ ?>
-</body>
-
-</html>
+<?php
+get_footer();
