@@ -30,23 +30,31 @@ function add_links_anglo() {
 }
 add_shortcode( 'links_anglo', 'add_links_anglo' );
 
-function add_banner_english() {
+function add_depoimentos() {
     ob_start();
-    get_template_part( 'components/english/banner' );
+    get_template_part( 'components/depoimentos','anglo' );
     wp_reset_query();
     return ob_get_clean();
 }
-add_shortcode( 'banner_english', 'add_banner_english' );
+add_shortcode( 'depoimentos', 'add_depoimentos' );
 
-function add_noticia_widget() {
-    ob_start();
-    get_template_part( 'components/noticias/widget' );
-    wp_reset_query();
-    return ob_get_clean();
-}
-add_shortcode( 'noticias_widget', 'add_noticia_widget' );
+// function add_banner_english() {
+//     ob_start();
+//     get_template_part( 'components/english/banner' );
+//     wp_reset_query();
+//     return ob_get_clean();
+// }
+// add_shortcode( 'banner_english', 'add_banner_english' );
 
-function add_section_fullwd($atts, $content = null) {
+// function add_noticia_widget() {
+//     ob_start();
+//     get_template_part( 'components/noticias/widget' );
+//     wp_reset_query();
+//     return ob_get_clean();
+// }
+// add_shortcode( 'noticias_widget', 'add_noticia_widget' );
+
+function add_section($atts, $content = null) {
 		extract( shortcode_atts( array(
             'class' => false,
             'bg' => false,
@@ -65,7 +73,7 @@ function add_section_fullwd($atts, $content = null) {
 		return $html;
 
 }
-add_shortcode( 'full-wd', 'add_section_fullwd' );
+add_shortcode( 'section', 'add_section' );
 
 function add_fancy_title($atts, $content = null) {
     extract( shortcode_atts( array(

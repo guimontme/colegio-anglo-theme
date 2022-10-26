@@ -140,6 +140,10 @@ function crb_attach_theme_options() {
     ->set_context( 'side' )
     ->add_fields( array(
         Field::make( 'text', 'fancy_subtitle', 'Subtitulo do FancyTitle' )->set_visible_in_rest_api( $visible = true ),
+        Field::make( 'image', 'fancy_background', 'Fundo do Fancytitle' )
+                ->set_width( 50 )
+                ->set_value_type('url')
+                ->set_visible_in_rest_api( $visible = true ),
     ) );
 
 }

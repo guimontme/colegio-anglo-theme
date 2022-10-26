@@ -43,7 +43,7 @@ $map_code = carbon_get_theme_option('map_code');
                             <h3 class="contato_header">Contato</h3>
                             <ul class="contato_list">
                                 <?php echo ($adderess_footer) ? "<li class='address'>{$adderess_footer}</li>" : "";?>
-                                <?php echo ($text_whatsapp_footer && $href_whatsapp_footer) ? "<li class='whatsapp'><a href='https://wa.me/{$href_whatsapp_footer}'>{$text_whatsapp_footer}</a></li>" : "";?>
+                                <?php echo ($text_whatsapp_footer && $href_whatsapp_footer) ? "<li class='whatsapp'><a href='https://wa.me/{$href_whatsapp_footer}' target='_blank'>{$text_whatsapp_footer}</a></li>" : "";?>
                                 <?php echo ($text_phone_footer && $href_phone_footer) ? "<li class='phone'><a href='tel:{$href_phone_footer}'>{$text_phone_footer}</a></li>" : "";?>
                                 <?php echo ($email_footer) ? "<li class='email'><a href='mailto:{$email_footer}'>{$email_footer}</a></li>" : "";?>
                             </ul>

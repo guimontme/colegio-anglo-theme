@@ -1,0 +1,26 @@
+.gallery-anglo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 36px;
+    
+    .yellow-block {
+        background: $yellow;
+        border-radius: 10px;
+
+        &.n-1 {
+            width: 127px;
+            height: 250px;
+        }
+        &.n-2 {
+            width: 127px;
+            height: 135px;
+        }
+        &.n-3 {
+            width: 95px;
+            height: 170px;
+        }
+
+    }
+}

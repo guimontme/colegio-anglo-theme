@@ -7,6 +7,7 @@ get_header();
 
 if ( have_posts() ) :
 ?>	
+<?php echo do_shortcode( '[links_anglo]' ); ?>
 	<header class="page-header">
 		<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'colegio-anglo' ), get_search_query() ); ?></h1>
 	</header>

@@ -9,6 +9,7 @@ get_header();
 
 $page_id = get_option( 'page_for_posts' );
 ?>
+<?php echo do_shortcode( '[links_anglo]' ); ?>
 <div class="row">
 	<div class="col-md-12">
 		<?php

@@ -9,6 +9,7 @@ get_header();
 
 $search_enabled = get_theme_mod( 'search_enabled', '1' ); // Get custom meta-value.
 ?>
+<?php echo do_shortcode( '[links_anglo]' ); ?>
 <div id="post-0" class="content error404 not-found">
 	<h1 class="entry-title"><?php esc_html_e( 'Not found', 'colegio-anglo' ); ?></h1>
 	<div class="entry-content">

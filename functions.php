@@ -521,5 +521,7 @@ if($carbon_fields) {
 	require_once $carbon_fields;
 	require_once (__DIR__. '/inc/carbon/opcoes-do-tema.php');
 	require_once (__DIR__. '/inc/carbon/banner-home.php');
+	require_once (__DIR__. '/inc/carbon/sections-home.php');
+	require_once (__DIR__. '/inc/carbon/depoimentos.php');
 }
 

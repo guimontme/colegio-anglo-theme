@@ -12,12 +12,13 @@
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "../node_modules/bootstrap/scss/functions";
 
-// 2. Include any default variable overrides here
 
+// 2. Include any default variable overrides here
 @import './sass/commons/variables';
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "../node_modules/bootstrap/scss/variables";
+
 
 // 4. Include any default map overrides here
 
@@ -70,6 +71,7 @@
 body {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 400;
+	color: $gray;
 	&.page-template-page-full {
 		#main {
 			max-width: 100%;
@@ -132,6 +134,7 @@ img {
 
 #main {
 	margin-top: $spacer;
+	margin-bottom: -10px;
 }
 
 /* Footer */
@@ -300,9 +303,26 @@ strong {
 	font-weight: 700;
 }
 
+.btn {
+	border-radius: $border-radius !important;
+}
+
 /*
  imports
 */
 @import 'sass/header';
 @import './sass/home/banner';
 @import 'sass/linksanglo';
+@import 'sass/fancytitle';
+@import 'sass/commons/commons';
+
+
+/*
+Pages
+*/
+@import 'sass/home/home';
+
+/**
+	Components
+*/
+@import 'sass/components/depoimentos';

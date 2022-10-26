@@ -88,7 +88,10 @@ header {
             img {
                 max-height: 173px;
             }
-            margin-right: 75px;
+            @include media-breakpoint-up(md) {
+                margin: 28px 75px 35px 0;
+            }
+
         }
 
         .navbar-nav {
@@ -172,4 +175,5 @@ header {
         } 
         
     }
+    
 }

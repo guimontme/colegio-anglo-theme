@@ -7,6 +7,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	<?php wp_head(); ?>
+	<!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#1054a3">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
 </head>
 
 <?php
@@ -71,15 +80,13 @@
 	</header>
 	<?php if (is_page_template( 'page-templates/home.php' )): ?>
     	<?php echo do_shortcode( '[banner_home]' ); ?>
+		<?php echo do_shortcode( '[links_anglo]' ); ?>
 	<?php endif; ?>
-	<?php echo do_shortcode( '[links_anglo]' ); ?>
-	<main id="main" class="container"<?php if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' style="padding-top: 100px;"'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' style="padding-bottom: 100px;"'; endif; ?>>
+	<main id="main"<?php if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' style="padding-top: 100px;"'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' style="padding-bottom: 100px;"'; endif; ?>>
 		<?php
 			// If Single or Archive (Category, Tag, Author or a Date based page).
 			if ( is_single() || is_archive() ) :
 		?>
-			<div class="row">
-				<div class="col-md-8 col-sm-12">
 		<?php
 			endif;
 		?>

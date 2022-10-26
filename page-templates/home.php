@@ -9,7 +9,7 @@ get_header();
 
 ?>
 <?php // get_template_part( 'components/header/header' ) ?><!-- #header -->
-<main id="content" class="site-content row">
+<main id="content" class="site-content">
             <?php
             $args = array (
                 'post_type' => 'home_section',
