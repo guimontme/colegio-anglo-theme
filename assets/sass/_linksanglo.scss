@@ -10,7 +10,7 @@
   grid-template-columns: 50% 50%;
   grid-template-rows: 1fr 1fr;
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
   }

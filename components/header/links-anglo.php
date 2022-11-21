@@ -1,5 +1,5 @@
-<div class="container">
-    <div class="card card-links">
+<div class="container-xl links-anglo">
+    <div class="card-links">
 
 <!-- Aqui entra o foreach -->
     <?php
@@ -8,10 +8,11 @@
       if($key < 4) {
         echo '<div class="card-item">';
         echo '<div class="card-logo">';
-        echo '<img class="" src="'. $banner['imagem'] . '" alt="'. esc_attr( $banner['title'] ) .'">';
+        echo '<a href="'. esc_url($banner['url']). '">';
+        echo '<img class="" src="'. $banner['imagem'] . '" alt="'. esc_attr( $banner['title'] ) .'"></a>';
         echo '</div>'; //end carousel-item
         if($banner['url']) {
-          echo ($banner['url']) ? '<p class="text-right saiba-mais"><a  class="" href="' . esc_url( $banner['url'] ) . '" target="_blank" target="'.esc_attr($banner['target'] ).'" > Saiba mais <i class="icon-left"></i> </a></p>' : '';
+          echo ($banner['url']) ? '<p class="text-right saiba-mais"> Saiba mais <i class="icon-left"></i></p>' : '';
         }
         echo '</div>'; //end carousel-item
         

@@ -19,7 +19,7 @@
 <section class="top-bar">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col_tels">
+            <div class="col-lg-4 col_tels d-none d-lg-block">
                 <?php if(!empty($href_whatsapp) && !empty($text_whatsapp)): ?>
                 <a href="https://wa.me/<?= $href_whatsapp; ?>" target="_blank">
                     <img src="<?= $icon_whatsapp; ?>" alt="" srcset=""> <?= $text_whatsapp; ?>
@@ -33,7 +33,7 @@
             </div>
             <!-- ./ whatsApp and phone -->
 
-            <div class="col-lg-4 hidden-xs col_search">
+            <div class="col-lg-4 d-none d-lg-block col_search">
                 <?php 
                     if ( '1' === $search_enabled ) :
 					?>

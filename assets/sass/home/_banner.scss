@@ -1,6 +1,6 @@
 .banner_home {
     .carousel-item {
-        @include media-breakpoint-up(sm) {
+        @include media-breakpoint-up(md) {
             &.active {
                 max-height: 775px !important;
                 img {
