@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row news_row">
 <?php
     $noticias_home = new WP_Query( array(
     // 'category_name' => 'news',

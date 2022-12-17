@@ -23,9 +23,8 @@ if( $categories ){
 }
 ?>
 
-<div class="col-md-4 noticia-col">
-    <div class="category_bread"><?php echo $category_bread; ?></div>
-    <a href="<?php the_permalink(); ?>">
+<div class="col-md-4 news_col">
+    <a href="<?php the_permalink(); ?>" class="thumbnail">
         <?php
 
         if(has_post_thumbnail()) {
@@ -38,10 +37,10 @@ if( $categories ){
         ?>
     </a>
     <a href="<?php the_permalink(); ?>"><?php the_title('<h3>','</h3>'); ?></a>
-    <p>
-        <?php the_excerpt(); ?>
+    <p class="news_date">
+        <?php echo get_the_date('j \d\e F \d\e Y', null ); ?>
     </p>
     <p class="text-right mt-0">
-        <a href="<?php the_permalink(); ?>" class="btn btn-primary btn-sm">Leia +</a>
+        <a href="<?php the_permalink(); ?>" class="link_read_more">Leia <span></span></a>
     </p>
 </div>

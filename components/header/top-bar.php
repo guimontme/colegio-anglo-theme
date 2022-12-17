@@ -19,17 +19,19 @@
 <section class="top-bar">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col_tels d-none d-lg-block">
-                <?php if(!empty($href_whatsapp) && !empty($text_whatsapp)): ?>
-                <a href="https://wa.me/<?= $href_whatsapp; ?>" target="_blank">
-                    <img src="<?= $icon_whatsapp; ?>" alt="" srcset=""> <?= $text_whatsapp; ?>
-                </a>
-                <?php endif; ?>
-                <?php if(!empty($href_tel) && !empty($text_tel)): ?>
-                <a href="tel:+<?= $href_tel; ?>">
-                    <img src="<?= $icon_tel; ?>" alt="" srcset=""> <?= $text_tel; ?>
-                </a>
-                <?php endif; ?>
+            <div class="col-lg-4 d-none d-lg-block">
+                <div class="col_tels">
+                    <?php if(!empty($href_whatsapp) && !empty($text_whatsapp)): ?>
+                    <a href="https://wa.me/<?= $href_whatsapp; ?>" target="_blank">
+                        <img src="<?= $icon_whatsapp; ?>" alt="" srcset=""> <?= $text_whatsapp; ?>
+                    </a>
+                    <?php endif; ?>
+                    <?php if(!empty($href_tel) && !empty($text_tel)): ?>
+                    <a href="tel:+<?= $href_tel; ?>">
+                        <img src="<?= $icon_tel; ?>" alt="" srcset=""> <?= $text_tel; ?>
+                    </a>
+                    <?php endif; ?>
+                </div>
             </div>
             <!-- ./ whatsApp and phone -->
 
