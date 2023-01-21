@@ -14,10 +14,8 @@
         left: 0;
         right: 0;
         position: absolute;
-        background: linear-gradient(180.12deg, #1755A2 -5.96%, #EDE76B 73.18%, #F36868 108.29%);
         opacity: .9;
         z-index: 1;
-        mix-blend-mode: multiply;
     }
     @include media-breakpoint-up(md) {
         min-height: 400px;

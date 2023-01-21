@@ -13,6 +13,14 @@ function add_noticias() {
 }
 add_shortcode( 'noticias', 'add_noticias' );
 
+function add_section_noticias() {
+    ob_start();
+    get_template_part( 'components/section', 'noticias' );
+    wp_reset_query();
+    return ob_get_clean();
+}
+add_shortcode( 'section-noticias', 'add_section_noticias' );
+
 function add_banner() {
     ob_start();
     get_template_part( 'components/home/banner' );

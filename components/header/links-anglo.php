@@ -12,7 +12,7 @@
         echo '<img class="" src="'. $banner['imagem'] . '" alt="'. esc_attr( $banner['title'] ) .'"></a>';
         echo '</div>'; //end carousel-item
         if($banner['url']) {
-          echo ($banner['url']) ? '<p class="text-right saiba-mais"> Saiba mais <i class="icon-left"></i></p>' : '';
+          echo ($banner['url']) ? '<p class="text-right saiba-mais"> <a href="'.esc_url($banner['url']) .'">Saiba mais <i class="icon-left"></i></a></p>' : '';
         }
         echo '</div>'; //end carousel-item
         

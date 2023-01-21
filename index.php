@@ -9,6 +9,13 @@ get_header();
 
 $page_id = get_option( 'page_for_posts' );
 ?>
+<?php 
+	$fancy_background = carbon_get_the_post_meta('fancy_background'); 
+	$fancy_subtitle = carbon_get_the_post_meta('fancy_subtitle');
+?>
+<header class="fancy-title" style="background: url('<?php echo $fancy_background; ?>');">
+	<h1 class="title"><?php the_title(); ?></h1>
+</header><!-- .entry-header -->
 <?php echo do_shortcode( '[links_anglo]' ); ?>
 <div class="row">
 	<div class="col-md-12">

@@ -41,6 +41,6 @@ if( $categories ){
         <?php echo get_the_date('j \d\e F \d\e Y', null ); ?>
     </p>
     <p class="text-right mt-0">
-        <a href="<?php the_permalink(); ?>" class="link_read_more">Leia <span></span></a>
+        <a href="<?php the_permalink(); ?>" class="link_read_more">Leia mais <span></span></a>
     </p>
 </div>

@@ -14,10 +14,10 @@ the_post();
 	$fancy_subtitle = carbon_get_the_post_meta('fancy_subtitle');
 ?>
 <header class="fancy-title" style="background: url('<?php echo $fancy_background; ?>');">
-	<h1 class="title text-uppercase"><?php the_title(); ?></h1>
+	<h1 class="title"><?php the_title(); ?></h1>
 </header><!-- .entry-header -->
 <?php echo do_shortcode( '[links_anglo]' ); ?>
-<div id="post-<?php the_ID(); ?>" <?php post_class( 'content my-4', 'my-4' ); ?>>
+<div id="post-<?php the_ID(); ?>" <?php post_class( 'content'); ?>>
 
 	<?php
 		the_content();
