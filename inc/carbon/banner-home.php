@@ -42,12 +42,16 @@ function crb_attach_banner_options() {
             ->set_html( '<p>Somente 4 links.</p>' ),
             Field::make( 'complex', 'crb_links_group', 'Links Anglo' )
                 ->add_fields( array(
-                    Field::make( 'image', 'imagem', 'Imagem do Banner' ) 
+                    Field::make( 'image', 'imagem', 'Logo do Parceiro' ) 
                         ->set_width( 20 )
                         ->set_value_type('url')
                         ->set_required(),
-                    Field::make( 'text', 'title', 'Título do Banner' )
-                        ->set_help_text( 'Título do Banner' )
+                    Field::make( 'image', 'icon', 'Ícone do Parceiro' ) 
+                        ->set_width( 20 )
+                        ->set_value_type('url')
+                        ->set_required(),
+                    Field::make( 'text', 'title', 'Título do Parceiro' )
+                        ->set_help_text( 'Título do Parceiro' )
                         ->set_width( 80 )
                         ->set_required(),
                     Field::make( 'text', 'url', 'Link do "Saiba +"' )

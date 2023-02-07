@@ -67,12 +67,14 @@ function add_section($atts, $content = null) {
             'class' => false,
             'bg' => false,
             'bgcolor' => false,
+            'id' => false,
 
 		), $atts ) );
 
 		$html = '<section class="full-cover';
 		$html .= ( $class ) ? ' ' . esc_attr( $class ) . '"' : '"';
 		$html .= ( $bg ) ? ' style="background: url(\'' . esc_attr( $bg ) . '\');"' : '';
+        $html .= ( $id ) ? ' id="' . esc_attr( $id ) . '"' : '';
 		$html .= ( $bgcolor ) ? ' style="background-color:' . esc_attr( $bgcolor ) . ';"' : '';
 		$html .= '>';
 		$html .= do_shortcode( $content );

@@ -17,9 +17,9 @@
 
 ?>
 <section class="top-bar">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-4 d-none d-lg-block">
+            <div class="col d-none d-lg-block">
                 <div class="col_tels">
                     <?php if(!empty($href_whatsapp) && !empty($text_whatsapp)): ?>
                     <a href="https://wa.me/<?= $href_whatsapp; ?>" target="_blank">
@@ -35,7 +35,7 @@
             </div>
             <!-- ./ whatsApp and phone -->
 
-            <div class="col-lg-4 d-none d-lg-block col_search">
+            <div class="col d-none d-lg-block col_search">
                 <?php 
                     if ( '1' === $search_enabled ) :
 					?>
@@ -50,7 +50,7 @@
 					?>
             </div><!-- search form -->
 
-            <div class="col-lg-4 col_links">
+            <div class="col col_links">
                 <?php if(!empty($url_btn_blue) && !empty($text_btn_blue)): ?>
                     <a href="<?= $url_btn_blue; ?>" target="<?= $target_btn_blue; ?>" class="btn btn-primary"><?= $text_btn_blue; ?></a>
                 <?php endif; ?>

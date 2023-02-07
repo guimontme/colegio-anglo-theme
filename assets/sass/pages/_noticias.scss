@@ -1,0 +1,159 @@
+.card-news {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex: 1;
+
+    .thumbnail {
+        .post-thumbnail {
+            border-radius: 10px;
+            padding: 0;
+            overflow: hidden;
+            box-shadow: 0px 4px 5px rgba($gray-500, 0.8);
+        }
+
+    }
+    .box-title {
+        display: flex;
+        align-items: center;
+        min-height: 70px;
+        margin-bottom: 1rem;
+        padding-top: 1rem;
+    }
+    .news-title {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 27px; 
+
+        a {
+            color: $gray-900
+        }
+    }
+
+    .news-date {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 22px;
+
+        a {
+            color: $gray-900;
+        }
+    }
+
+    .saiba-mais {
+        color: $red;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 14px;
+    
+        .icon-left {
+            display: inline-block;
+            margin-left: 20px;
+            width: 13px;
+            height: 10px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-image: url("data:image/svg+xml,%3Csvg width='14' height='15' viewBox='0 0 14 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.838867 8.5V6.5H10.7098L7.41951 2.5L8.24209 0.5L14.0002 7.5L8.24209 14.5L7.41951 12.5L10.7098 8.5H0.838867Z' fill='%23EFE51F'/%3E%3C/svg%3E%0A");
+        }
+    }
+
+}
+
+.sidebar {
+    > h2, h3 {
+        color: $blue;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 32px;
+        padding-inline-start: 1rem;
+        border-block-end: 3px solid $blue;
+        padding-bottom: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    li {
+        margin-bottom: 2px;
+        h4 {
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 27px;
+            
+            a {
+                color: $gray;
+            }
+        }
+    
+        .news_date {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 22px;
+            color: $gray-900;
+        }
+
+        .saiba-mais {
+            color: $red;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+        
+            .icon-left {
+                display: inline-block;
+                margin-left: 20px;
+                width: 13px;
+                height: 10px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-image: url("data:image/svg+xml,%3Csvg width='14' height='15' viewBox='0 0 14 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.838867 8.5V6.5H10.7098L7.41951 2.5L8.24209 0.5L14.0002 7.5L8.24209 14.5L7.41951 12.5L10.7098 8.5H0.838867Z' fill='%23EFE51F'/%3E%3C/svg%3E%0A");
+            }
+        }
+    }
+}
+
+.wp-block-categories {
+    display: flex; 
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 0;padding-left: 0;
+    .cat-item {
+        @extend .btn;
+        @extend .btn-danger;
+        a {
+            color: $white;
+        }
+    }
+}
+
+
+.type-post  {
+    .entry-header {
+
+        .entry-title {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 47px;
+            color: $gray;
+    
+    
+            a {
+                color: $gray;
+            }
+        }
+        .entry-meta {
+            a {
+                color: $gray;
+            }
+        }
+    }
+    .entry-content {
+        > .post-thumbnail {
+            margin-bottom: 1.5rem;
+        }
+    }
+}

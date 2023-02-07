@@ -25,7 +25,7 @@ if ( have_posts() ) :
 			 * If you want to overload this in a child theme then include a file
 			 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 			 */
-			get_template_part( 'content', 'index' ); // Post format: content-index.php
+			get_template_part( 'content', 'search' ); // Post format: content-index.php
 			// get_template_part( 'components', 'noticias' ); // Post format: content-index.php
 		endwhile;
 	?>

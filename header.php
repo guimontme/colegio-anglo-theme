@@ -31,10 +31,10 @@
 <a href="#main" class="visually-hidden-focusable"><?php esc_html_e( 'Skip to main content', 'colegio-anglo' ); ?></a>
 
 <div id="wrapper">
-	<header>
+	<header id="header-top">
 		<?php echo get_template_part( 'components/header/top', 'bar' ); ?>
-		<nav id="header" class="navbar navbar-expand-md <?php if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' fixed-top'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' fixed-bottom'; endif; if ( is_home() || is_front_page() ) : echo ' home'; endif; ?>">
-			<div class="container">
+		<nav id="header" class="navbar navbar-expand-lg <?php if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' fixed-top'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' fixed-bottom'; endif; if ( is_home() || is_front_page() ) : echo ' home'; endif; ?>">
+			<div class="container-fluid">
 				<a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 					<?php if (! empty($logo_site)): ?> 
 						<img src="<?php echo $logo_site; ?>"
@@ -56,9 +56,10 @@
                 	<?php endif; ?> 
 				</a>
 
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'colegio-anglo' ); ?>">
-					<span class="navbar-toggler-icon"></span>
-				</button>
+				<a class="navbar-toggler toggler-custom" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'colegio-anglo' ); ?>">
+					<!-- <span class="navbar-toggler-icon"></span> -->
+					<span class="toggler-custom-icon"></span>
+				</a>
 
 				<div id="navbar" class="collapse navbar-collapse">
 					<?php

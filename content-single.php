@@ -37,10 +37,10 @@
 	<footer class="entry-meta">
 		<hr>
 		<?php
-			/* translators: used between list items, there is a space after the comma */
+			/* translators: used between list items, there is a space after the comma
 			$category_list = get_the_category_list( __( ', ', 'colegio-anglo' ) );
 
-			/* translators: used between list items, there is a space after the comma */
+			/* translators: used between list items, there is a space after the comma
 			$tag_list = get_the_tag_list( '', __( ', ', 'colegio-anglo' ) );
 			if ( '' != $tag_list ) :
 				$utility_text = __( 'This entry was posted in %1$s and tagged %2$s by <a href="%6$s">%5$s</a>. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'colegio-anglo' );
@@ -62,7 +62,7 @@
 		?>
 		<hr>
 		<?php
-			get_template_part( 'author', 'bio' );
+			get_template_part( 'author', 'bio' ); */
 		?>
 	</footer><!-- /.entry-meta -->
 </article><!-- /#post-<?php the_ID(); ?> -->

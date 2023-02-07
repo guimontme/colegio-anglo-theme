@@ -1,35 +1,100 @@
 .card-links {
   flex-direction: row !important;
-  border-radius: 0px 0px 20px 20px !important;
-  border: 0.5px solid #4A4A4A !important;
-  border-top: none !important;
   justify-content:  space-between;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   
   display: grid !important;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 1fr 1fr;
+  // grid-template-columns: 50% 50%;
+  // grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  
+  p {
+    display: none;
+  }
 
-  @include media-breakpoint-up(lg) {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
+  @include media-breakpoint-down(md) {
+    margin-inline: -10px;
+    border-left: none;
+    border-right: none;
+
+    .icon {
+      display: block;
+      max-width: 100%;
+    }
+
+    .logo {
+      display: none;
+    }
+
+  }
+  
+  @include media-breakpoint-up(md) {
+    border-radius: 0px 0px 20px 20px !important;
+    // grid-template-columns: repeat(5, 1fr);
+    // grid-template-rows: 1fr;
+    border: 0.5px solid $gray-300 !important;
+    border-top: none !important;
+
+    .icon {
+      display: none;
+    }
+
+    .logo {
+      display: block;
+      max-width: 100%;
+    }
   }
 
   .card-item {
     padding: 15px;
-    min-height: 190px;
+    
     width: 100%;
     position: relative;
     text-align: center;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     align-content: center;
     flex-direction: column;
+
     & + .card-item {
-        border-left: 0.5px solid #4A4A4A;
+      border-left: 0.5px solid $gray-300;
+    } 
+    
+    // @include media-breakpoint-down(md) {
+    //   min-height: 50px;
+    //   &:nth-child(3), &:nth-child(4), &:nth-child(5) {
+    //     border-top: 1px solid $gray-300;
+    //   }
+    //   &:nth-child(2), &:nth-child(4) {
+    //     border-left: 0.5px solid $gray-300;
+    //   } 
+    //   &:nth-child(5) {
+    //     grid-column: 1/-1;
+    //   }
+
+    // }
+
+    @include media-breakpoint-up(md) {
+      min-height: 190px;
+      & + .card-item {
+          border-left: 0.5px solid $gray-300;
+      } 
     }
+
+
+    a {
+      max-width: fit-content;
+      img {
+        max-width: 100%;
+      }
+    }
+    
     p {
+      @include media-breakpoint-up(lg) {
+        display: block;
+      }
         font-style: normal;
         font-weight: 600;
         font-size: 18px;

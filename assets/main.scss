@@ -133,7 +133,9 @@ img {
 /* Main */
 
 #main {
-	margin-top: $spacer;
+	@include media-breakpoint-up(md) {
+		margin-top: $spacer;
+	}
 	margin-bottom: -10px;
 }
 
@@ -322,8 +324,17 @@ strong {
 Pages
 */
 @import 'sass/home/home';
+@import 'sass/pages/noticias';
 
 /**
 	Components
 */
 @import 'sass/components/depoimentos';
+@import 'sass/galleries';
+
+html {
+	font-size: 14px;
+	@include media-breakpoint-up(sm) {
+		font-size: 16px;
+	}
+}

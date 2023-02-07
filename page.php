@@ -13,7 +13,11 @@ the_post();
 	$fancy_background = carbon_get_the_post_meta('fancy_background'); 
 	$fancy_subtitle = carbon_get_the_post_meta('fancy_subtitle');
 ?>
-<header class="fancy-title" style="background: url('<?php echo $fancy_background; ?>');">
+<header class="fancy-title" 
+<?php if(!empty($fancy_background)) : ?>
+style="background-image: url('<?php echo $fancy_background; ?>');"
+<?php endif; ?>
+>
 	<h1 class="title"><?php the_title(); ?></h1>
 </header><!-- .entry-header -->
 <?php echo do_shortcode( '[links_anglo]' ); ?>

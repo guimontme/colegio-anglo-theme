@@ -27,16 +27,19 @@ Text Domain: colegio-anglo
 div.aligncenter {
 	display: block;
 	margin: 5px auto 5px auto;
+	text-align: center;
 }
 
 .alignright {
 	float: right;
 	margin: 5px 0 20px 20px;
+	text-align: right;
 }
 
 .alignleft {
 	float: left;
 	margin: 5px 20px 20px 0;
+	text-align: left;
 }
 
 a img.alignright {
@@ -202,4 +205,11 @@ a img.aligncenter {
 	top: 5px;
 	width: auto;
 	z-index: 100000; /* Above WP toolbar. */
+}
+
+.has-text-align-center {
+	text-align: center;
+}
+.has-text-align-right {
+	text-align: right;
 }

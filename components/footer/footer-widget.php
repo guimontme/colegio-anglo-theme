@@ -15,6 +15,7 @@ $map_code = carbon_get_theme_option('map_code');
 ?>
         <div id="footer-widget" class="row my-2">
             <div class="container">
+                <?php if($shortcode_newsletter): ?>
                 <div class="row row_newsletter">
                     <div class="col-lg-6">
                         <label>
@@ -25,7 +26,8 @@ $map_code = carbon_get_theme_option('map_code');
                         <?php echo (!empty($shortcode_newsletter)) ? do_shortcode($shortcode_newsletter) : ''; ?>
                     </div>
                 </div>
-                <div class="row">
+                <?php endif; ?>
+                <div class="row row-footer">
                         <div class="col-12 col-lg-3 col_description">
                             <?php if($logo_footer): ?> 
                                 <a href="<?php echo esc_url( home_url( '/' )); ?>" class="logo_footer">

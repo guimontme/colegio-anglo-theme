@@ -8,7 +8,6 @@
 
 	.row_newsletter {
 		margin-top: 74px;
-		margin-bottom: 65px;
 		padding-bottom: 50px;
 		border-bottom: 1px solid rgba($white, 0.5);
 		strong {
@@ -36,6 +35,13 @@
 		}
 	}
 
+	.row-footer {
+		padding-top: 2rem;
+		@include media-breakpoint-up(lg) {
+			padding-top: 65px;
+		}
+	}
+
 	p {
 		margin-top: 10px;
 	}
@@ -43,7 +49,11 @@
 	h3 {
 		font-weight: 700;
 		font-size: 22px;
-		margin-bottom: 25px;
+		margin-bottom: 1.5rem;
+
+		@include media-breakpoint-down(md) {
+			margin-top: 2rem;
+		}
 	}
 	h4 {
 		font-weight: 400;
@@ -203,4 +213,19 @@
 			padding: 0;
 		}
 	}
+}
+
+.floating_whatsapp {
+	img{
+		max-width: 4rem;
+	}
+	@include media-breakpoint-up(md) {
+		img{
+			max-width: 4rem;
+		}
+	}
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	z-index: 9999;
 }

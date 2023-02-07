@@ -228,6 +228,18 @@ function colegio_anglo_widgets_init() {
 		)
 	);
 
+	// Area 1.
+	register_sidebar(
+		array(
+			'name'          => 'Sidebar Noticia',
+			'id'            => 'noticias_widget_area',
+			'before_widget' => '',
+			'after_widget'  => '',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+
 	// Area 2.
 	register_sidebar(
 		array(
@@ -263,7 +275,7 @@ if ( ! function_exists( 'colegio_anglo_article_posted_on' ) ) :
 	 */
 	function colegio_anglo_article_posted_on() {
 		printf(
-			wp_kses_post( __( '<span class="sep">Posted on </span><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author-meta vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'colegio-anglo' ) ),
+			wp_kses_post( __( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a>', 'colegio-anglo' ) ),
 			esc_url( get_the_permalink() ),
 			esc_attr( get_the_date() . ' - ' . get_the_time() ),
 			esc_attr( get_the_date( 'c' ) ),
@@ -477,6 +489,11 @@ if ( is_readable( $custom_walker_footer ) ) {
 }
 
 
+// Remove wpautop from content
+remove_filter('the_content', 'wpautop'); 
+remove_filter('the_excerpt', 'wpautop');
+
+
 /**
  * Loading All CSS Stylesheets and Javascript Files.
  *
@@ -502,6 +519,16 @@ function colegio_anglo_scripts_loader() {
 }
 add_action( 'wp_enqueue_scripts', 'colegio_anglo_scripts_loader' );
 
+// disable gutenberg frontend styles @ https://m0n.co/15
+function disable_gutenberg_wp_enqueue_scripts() {
+	
+	wp_dequeue_style('wp-block-library');
+	wp_dequeue_style('wp-block-library-theme');
+	
+}
+add_filter('wp_enqueue_scripts', 'disable_gutenberg_wp_enqueue_scripts', 100);
+
+
 /**
  * Shortcodes
  */
@@ -525,3 +552,8 @@ if($carbon_fields) {
 	require_once (__DIR__. '/inc/carbon/depoimentos.php');
 }
 
+
+/**
+ * Ajax function
+ */
+require_once (__DIR__. '/inc/ajax.php');

@@ -117,7 +117,10 @@ function crb_attach_theme_options() {
             ->set_help_text( 'Escreva o completo e tudo junto, e sem o "+" do DDI. Ex.: 552129999999' )
             ->set_width( 50 ),
         
-        Field::make('textarea', 'map_code', 'Código do Mapa'),
+        
+        Field::make('textarea', 'map_code', 'Código do Mapa')->set_width( 100 ),
+        Field::make( 'text', 'link_poltica', 'Link Politica de Privacidade' )
+            ->set_width( 100 ),
 	));
 	 // Contato
 	 Container::make( 'theme_options', 'Contato' )
@@ -130,9 +133,19 @@ function crb_attach_theme_options() {
 			 ->set_help_text( 'Escreva o completo e tudo junto, e sem o "+" do DDI. Ex.: 552129999999' ),
 		//  Field::make('text', 'ddd_tel_whatsapp', 'DDI + DD')
 		// 	 ->set_width( 20 )->set_help_text( 'Ex: +55 21' ),
-		 Field::make('text', 'phone_tel_whatsapp', 'Telefone em bold')
-			 ->set_width( 40 ),
 	 ) );
+
+    // Subtitulo de Notícias 
+    Container::make( 'theme_options', __( 'Paginas de Notícias' ) )
+    ->set_page_parent( $basic_options_container )
+    ->add_fields( array(
+        Field::make( 'text', 'fancy_title_news', 'Título do FancyTitle de Notícias' )->set_visible_in_rest_api( $visible = true ),
+        Field::make( 'image', 'fancy_bg_news', 'Fundo do FancyTitle de Notícias' )
+                ->set_width( 50 )
+                ->set_value_type('url')
+                ->set_visible_in_rest_api( $visible = true ),
+        Field::make( 'text', 'title_news', 'Título de Notícias' )->set_visible_in_rest_api( $visible = true ),
+    ) );
 
     // Subtitulo das páginas
     Container::make( 'post_meta', __( 'Opções das Páginas', 'page-options' ) )
@@ -145,5 +158,9 @@ function crb_attach_theme_options() {
                 ->set_value_type('url')
                 ->set_visible_in_rest_api( $visible = true ),
     ) );
+
+
+
+
 
 }
